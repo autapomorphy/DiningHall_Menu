@@ -2,10 +2,11 @@ package auta.website.dininghall_menu.services.map;
 
 import auta.website.dininghall_menu.model.Dish;
 import auta.website.dininghall_menu.services.CrudService;
+import auta.website.dininghall_menu.services.DishService;
 
 import java.util.Set;
 
-public class DishServiceMap extends AbstractMapService<Dish,Long> implements CrudService<Dish,Long> {
+public class DishServiceMap extends AbstractMapService<Dish,Long> implements DishService {
 
     @Override
     public Set<Dish> findAll() {
@@ -24,11 +25,16 @@ public class DishServiceMap extends AbstractMapService<Dish,Long> implements Cru
 
     @Override
     public Dish save(Dish object) {
-        return super.save(object.getId(), object);
+        return super.save(object);
     }
 
     @Override
     public Dish findById(Long id) {
         return super.findById(id);
+    }
+
+    @Override
+    public Dish findByName(String name) {
+        return null;
     }
 }

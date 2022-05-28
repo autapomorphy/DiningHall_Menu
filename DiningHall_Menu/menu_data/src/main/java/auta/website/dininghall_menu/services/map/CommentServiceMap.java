@@ -1,11 +1,12 @@
 package auta.website.dininghall_menu.services.map;
 
 import auta.website.dininghall_menu.model.Comment;
+import auta.website.dininghall_menu.services.CommentService;
 import auta.website.dininghall_menu.services.CrudService;
 
 import java.util.Set;
 
-public class CommentServiceMap extends AbstractMapService<Comment,Long> implements CrudService<Comment,Long> {
+public class CommentServiceMap extends AbstractMapService<Comment,Long> implements CommentService {
 
     @Override
     public Set<Comment> findAll() {
@@ -24,7 +25,7 @@ public class CommentServiceMap extends AbstractMapService<Comment,Long> implemen
 
     @Override
     public Comment save(Comment object) {
-        return super.save(object.getId(), object);
+        return super.save(object);
     }
 
     @Override
