@@ -6,5 +6,20 @@
 </head>
 <body>
 <h1 th:text="'List of Dishes'"></h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>name</th>
+    </tr>
+  </thead>
+  <tbody>
+  <tr th:each="dish:${dishes}">
+    <td th:text="${dish.id}">0</td>
+    <td th:text="${dish.name}">dummy</td>
+  </tr>
+  </tbody>
+</table>
 </body>
 </html>

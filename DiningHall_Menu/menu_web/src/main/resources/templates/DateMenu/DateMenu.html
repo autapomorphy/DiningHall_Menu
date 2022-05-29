@@ -6,5 +6,23 @@
 </head>
 <body>
 <h1 th:text="'List of Menu'"></h1>
+
+<table>
+  <thead>
+  <tr>
+    <th>Id</th>
+    <th>name</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr th:each="menu:${menus}">
+    <td th:text="${menu.id}">0</td>
+    <td th:text="${menu.date}">1 Jan 1970</td>
+    <td th:text="${menu.type!= null}?${menu.type.name}:'type is null'">brunch</td>
+  </tr>
+  </tbody>
+</table>
+
+
 </body>
 </html>

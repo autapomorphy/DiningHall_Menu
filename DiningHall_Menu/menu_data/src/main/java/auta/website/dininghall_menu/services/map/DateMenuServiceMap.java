@@ -3,9 +3,10 @@ package auta.website.dininghall_menu.services.map;
 import auta.website.dininghall_menu.model.DateMenu;
 import auta.website.dininghall_menu.services.CrudService;
 import auta.website.dininghall_menu.services.DateMenuService;
+import org.springframework.stereotype.Service;
 
 import java.util.Set;
-
+@Service
 public class DateMenuServiceMap extends AbstractMapService<DateMenu,Long> implements DateMenuService {
     @Override
     public Set<DateMenu> findAll() {

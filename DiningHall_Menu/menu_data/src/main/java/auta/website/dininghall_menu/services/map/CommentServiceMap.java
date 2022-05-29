@@ -3,9 +3,10 @@ package auta.website.dininghall_menu.services.map;
 import auta.website.dininghall_menu.model.Comment;
 import auta.website.dininghall_menu.services.CommentService;
 import auta.website.dininghall_menu.services.CrudService;
+import org.springframework.stereotype.Service;
 
 import java.util.Set;
-
+@Service
 public class CommentServiceMap extends AbstractMapService<Comment,Long> implements CommentService {
 
     @Override
