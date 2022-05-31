@@ -6,6 +6,16 @@ public class Comment extends BaseEntity{
     String comment;
     Integer rate;
 
+    Dish dish;
+
+    public Dish getDish() {
+        return dish;
+    }
+
+    public void setDish(Dish dish) {
+        this.dish = dish;
+    }
+
     public String getUsername() {
         return username;
     }
